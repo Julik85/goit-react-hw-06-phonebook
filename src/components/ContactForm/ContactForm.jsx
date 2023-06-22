@@ -6,19 +6,19 @@ export const ContactForm = ({ handleSubmit }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const handleChangeName = e => {
-    const { value } = e.target;
+  const handleChangeName = event => {
+    const { value } = event.target;
     setName(value);
   };
 
-  const handleChangeNumber = e => {
-    const { value } = e.target;
+  const handleChangeNumber = event => {
+    const { value } = event.target;
     setNumber(value);
   };
 
-  const handleFormSubmit = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
+  const handleFormSubmit = event => {
+    event.preventDefault();
+    const form = event.currentTarget;
     handleSubmit({ name: name, number: number });
     form.reset();
   };
